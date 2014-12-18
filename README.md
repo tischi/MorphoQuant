@@ -28,7 +28,10 @@ tischitischer@gmail.com
 
 Please check the ExampleData folder!
 
-Once you start Morphoquant you need to browse to the folder that contains you data. The input data must be tif-stacks with the following naming scheme
+Once you start Morphoquant you need to browse to the folder that contains you data (Note: if MorphoQuant crashes at this point, please look for and remove the parameters.mat file from the respective folder).
+
+The input data must be tif-stacks with the following naming scheme:
+
 
 	MyData.tif
 	MyData-mask.tif
