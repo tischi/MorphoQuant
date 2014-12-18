@@ -4,7 +4,7 @@ MATLAB-based software for detection and quantification of locally bright structu
 
 The software comes with a graphical user interface: no programming or MATLAB skills required!
 
-The functionality of Morphoquant is very much "to the point" (if you need something more flexible I'd recommend CellProfiler (link)).
+The functionality of Morphoquant is very much "to the point" (if you need something more flexible I'd recommend CellProfiler on www.cellprofiler.org).
 
 
 ### Author & Contact information
