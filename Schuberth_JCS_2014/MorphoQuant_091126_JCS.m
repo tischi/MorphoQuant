@@ -1,5 +1,7 @@
 % 
-% Author: Christian Tischer; tischitischer@gmail.com
+% Author: 
+% Christian Tischer
+% tischitischer@gmail.com
 %
     
 function MorphoQuant_091126_JCS()
@@ -41,6 +43,7 @@ function MorphoQuant_091126_JCS()
     while(1)
         %%
         [param sExpMaskStack sData nExp] = selectDataFolder(param);
+        
         if(length(sExpMaskStack)==0) %% user pressed cancel
             return;
         end

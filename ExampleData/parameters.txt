@@ -1,0 +1,11 @@
+strucWidthTH:	Find structures: Width TH	50   8
+dotWidthTH:	Find dots: Width TH	2  3
+lineLengthTH:	Line suppression: Length TH	0  0
+areaSmallTH:	Distinguish small and large: maxAreaSmall	20
+objectSizeMinMax:	Reject: MinArea MaxArea	6  100000
+scale:	Rescale the image by factor (e.g. 0.5): 	1
+numImage:	Select image for testing:	2
+numFile:	TestFile	1
+prgPath:		C:\Documents and Settings\ALMF\Desktop\Schubi_MQ\MorphoQuant091130\
+sPath:		C:\Users\almf\Desktop\Schubi_MQ\MQ-test\
+lineAngle:		15

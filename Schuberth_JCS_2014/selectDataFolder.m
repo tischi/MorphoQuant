@@ -34,6 +34,7 @@ function  [param sExpMaskStack sData nExp] = selectDataFolder(param)
         
     end
 
+
     
     iDat = 0;
     for iFile = 1:length(sTemp)
@@ -44,6 +45,7 @@ function  [param sExpMaskStack sData nExp] = selectDataFolder(param)
     end
     
     nExp = length(sFiles);
+      
     
     sExpMaskStack = cell(1,4);
     
@@ -74,14 +76,14 @@ function  [param sExpMaskStack sData nExp] = selectDataFolder(param)
         
         nImages = length(info); info = [];
         sExpMaskStack{iExp,5} = nImages; % 
-        stringData{iExp} = sprintf('%.0f: %s (%.0f images) \n', iExp, sExpMaskStack{iExp,1}, nImages);
+        stringData{iExp} = sprintf('%.0f: %s (%.0f images)', iExp, sExpMaskStack{iExp,1}, nImages);
     
     end
     
     lastDataFolder = param.sPath.val ;
     param.prgPath.val
     save([param.prgPath.val  'lastFolder.mat'],'lastDataFolder');
-  
+    
     sData = stringData;
      
 

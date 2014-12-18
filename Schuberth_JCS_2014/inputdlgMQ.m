@@ -63,8 +63,6 @@ Resize = 'off';
 WindowStyle='modal';
 Interpreter='none';
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%
 %%% Create InputFig %%%
 %%%%%%%%%%%%%%%%%%%%%%%
