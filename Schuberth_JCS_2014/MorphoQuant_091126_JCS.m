@@ -184,7 +184,7 @@ function MorphoQuant_091126_JCS()
                     string = sprintf('%.0f\t%.0f\t',iImage,iCell);
              
                     for iF = 1 : length(sfeatures)
-                        string = [string sprintf('%.4f\t', features{iImage}(iCell).(sfeatures{iF}))];
+                        string = [string sprintf('%.8f\t', features{iImage}(iCell).(sfeatures{iF}))];
                     end
                     
                     disp(string);
@@ -195,21 +195,21 @@ function MorphoQuant_091126_JCS()
                 % mean
                 string = sprintf('%.0f\tmean\t',iImage);
                 for iF = 1 : length(sfeatures)
-                    string = [string sprintf('%.4f\t', nanmean([features{iImage}(:).(sfeatures{iF})]))];
+                    string = [string sprintf('%.8f\t', nanmean([features{iImage}(:).(sfeatures{iF})]))];
                 end
                 disp(string); fprintf(fid, '%s\n', string );
 
                 % median
                 string = sprintf('%.0f\tmedian\t',iImage);
                 for iF = 1 : length(sfeatures)
-                    string = [string sprintf('%.4f\t', nanmedian([features{iImage}(:).(sfeatures{iF})]))];
+                    string = [string sprintf('%.8f\t', nanmedian([features{iImage}(:).(sfeatures{iF})]))];
                 end
                 disp(string); fprintf(fid, '%s\n', string );
                 
                 % std
                 string = sprintf('%.0f\tstd\t',iImage);
                 for iF = 1 : length(sfeatures)
-                    string = [string sprintf('%.4f\t', nanstd([features{iImage}(:).(sfeatures{iF})]))];
+                    string = [string sprintf('%.8f\t', nanstd([features{iImage}(:).(sfeatures{iF})]))];
                 end
                 disp(string); fprintf(fid, '%s\n', string );
                
