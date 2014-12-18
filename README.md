@@ -17,13 +17,16 @@ tischitischer@gmail.com
 ## Prerequisites/Installation
 
 - you need MATLAB installed on your computer
-- download all files from GitHub (link)
+- download all files from GitHub [https://github.com/tischi/MorphoQuant/archive/master.zip]
 - load MorphoQuant_091126_JCS.m into MATLAB and run it (select "Change Folder" when MATLAB asks you to)
 
 
 ## Usage
 
 ### Input data
+
+
+Please check the ExampleData folder!
 
 Once you start Morphoquant you need to browse to the folder that contains you data. The input data must be tif-stacks with the following naming scheme
 
@@ -45,8 +48,6 @@ Morphoquant (MQ) will analyse each slice in each tif stack and will compute info
 
 Both files must be single slice tif images where pixels with gray values larger than zero are assigned to cells (in the "mask" image) or background (in the "mask-bg" image).    Such images can easily produced with ImageJ. Note that there is no automated cell or background segmentation in Morphoquant. 
 
-
-Please check out the example data that is provided here: link
 
 
 ### Adjusting parameter settings
@@ -93,13 +94,14 @@ For each input file there be an output file containing segmentation images, endi
 
 In addition, for each input file there will be a tab-delimited spreadsheet file ending on --MQ-results.txt (to be viewed in Excel).
 
-The text file contain the following measurements (each row corresponds to one cell):
+The text file contain the following measurements (each row corresponds to one cell, ):
 
 ##### iImage	
 Number of slice in the tif stack.
 
 ##### iCell
-Number of cell, corresponding to numbers in segmentation images.
+Number of cell, corresponding to numbers in segmentation images. If it says here "mean", "median", or "std", it means that these summary statistics are computed for all cells in the slice.
+
 
 ##### areaCell
 Number of pixels in the cell.
@@ -114,18 +116,23 @@ Number of "small" structures detected in the cell.
 Fraction of pixels positive for "small" structures. To obtain the pixel area you have to multiply with "areaCell". To get the mean pixel area of each object you have to multiply by "areaCell" and devide by nSegSmallForeground.
 
 ##### intensFracSmallForeground
-Fraction of intensity in the with "small" structures, after subjecting the image to an top-hat filter, using the "Width" parameter in "Find structures" as diameter of the erosion and dilation operations. To obtain the average sum intensity area you have to multiply with "areaCell". To get the mean pixel area of each object you have to multiply by "areaCell" and devide by nSegSmallForeground.
+Fraction of intensity in the with "small" structures, after subjecting the image to a top-hat filter, using the "Width" parameter in "Find structures" as diameter of the erosion and dilation operations. To obtain the average sum intensity area you have to multiply with "areaCell". To get the mean pixel area of each object you have to multiply by "areaCell" and devide by nSegSmallForeground.
 
 
 ##### nSegLargeForeground	
 …as decribed for "small" objects, but now for "large objects"
+
 ##### areaFracLargeForeground
 …as decribed for "small" objects, but now for "large objects"
+
 ##### intensFracLargeForeground
 …as decribed for "small" objects, but now for "large objects"
 
 ##### areaMaxFracForeground
 Fraction of pixels occupied by the largest of all detected objects in the respective cell. 
+
+##### maxIntensOfLargestObjectForeground
+The maximum intensity value found in the largest detected object. The maximum intensity in the largest object is measured after subjecting the image to a top-hat filter, using the "Width" parameter in "Find structures" as diameter of the erosion and dilation operations	
 
 ##### intensFracBackground	
 Fraction of intensity in the cellular "background" signal. The "background" signal in each cell is defined as the integrated intensity in the morphological opening of the background corrected raw data (using the "Width" parameter in "Find structures" as diameter of the erosion and dilation operations). Bascially, this is the fraction of intensity that is not localised to locally bright structures, e.g. the "unbound cytoplasmic signal".
