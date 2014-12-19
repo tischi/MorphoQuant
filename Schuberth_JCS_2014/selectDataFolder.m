@@ -82,7 +82,7 @@ function  [param sExpMaskStack sData nExp] = selectDataFolder(param)
     
     lastDataFolder = param.sPath.val ;
     param.prgPath.val
-    save([param.prgPath.val  'lastFolder.mat'],'lastDataFolder');
+    save([param.prgPath.val  'lastFolder.mat'], 'lastDataFolder');
     
     sData = stringData;
      

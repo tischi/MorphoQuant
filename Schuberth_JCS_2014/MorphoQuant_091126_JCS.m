@@ -9,9 +9,9 @@ function MorphoQuant_091126_JCS()
     set(0,'DefaultTextInterpreter','none');
     
     ip=0;
-    ip=ip+1;param.strucWidthTH.val = [20 20]; param.strucWidthTH.txt = 'Find structures: Width TH';
-    ip=ip+1;param.dotWidthTH.val = [1.5 3]; param.dotWidthTH.txt = 'Find dots: Width TH';
-    ip=ip+1;param.lineLengthTH.val = [20 5]; param.lineLengthTH.txt = 'Line suppression: Length TH';
+    ip=ip+1;param.strucWidthTH.val = [40 20]; param.strucWidthTH.txt = 'Find structures: Width TH';
+    ip=ip+1;param.dotWidthTH.val = [3 2]; param.dotWidthTH.txt = 'Find dots: Width TH';
+    ip=ip+1;param.lineLengthTH.val = [0 0]; param.lineLengthTH.txt = 'Line suppression: Length TH';
     ip=ip+1;param.areaSmallTH.val = ceil((2.5*param.dotWidthTH.val(1))^2*pi/4); param.areaSmallTH.txt = 'Distinguish small and large: maxAreaSmall';
     ip=ip+1;param.objectSizeMinMax.val = [5 1000000]; param.objectSizeMinMax.txt = 'Reject: MinArea MaxArea';
     ip=ip+1;param.scale.val = 1; param.scale.txt = 'Rescale the image by factor (e.g. 0.5): ';

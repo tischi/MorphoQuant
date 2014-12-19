@@ -93,10 +93,10 @@ function [imStack imStackSeg info features] = MorphoPipe_091126_JCS(im, imMask, 
         features.(['areaFracLarge' info{i}]) = sum([op(idsLarge).area])/features.areaCell;
         features.(['intensFracLarge' info{i}]) = sum(imTemp(imSeg==1))/features.intensTotCell;  % changed from im to imTemp, 5.March.2013 
         
-        features.(['areaMaxFrac' info{i}]) = max([op.area])/features.areaCell;
+        features.(['areaFracLargestObject' info{i}]) = max([op.area])/features.areaCell;
         
-        [v, iMaxArea] = max([op.area]);
-        features.(['maxIntensOfLargestObject' info{i}]) = max(imTemp(op(iMaxArea).ids));
+        [~, iMaxArea] = max([op.area]);
+        features.(['intensFracLargestObject' info{i}]) = sum(imTemp(op(iMaxArea).ids))/features.intensTotCell;
             
     else
         
@@ -108,8 +108,8 @@ function [imStack imStackSeg info features] = MorphoPipe_091126_JCS(im, imMask, 
         features.(['areaFracLarge' info{i}]) = 0;
         features.(['intensFracLarge' info{i}]) = 0;
     
-        features.(['areaMaxFrac' info{i}]) = 0;
-        features.(['maxIntensOfLargestObject' info{i}]) = 0;
+        features.(['areaFracLargestObject' info{i}]) = 0;
+        features.(['intensFracLargestObject' info{i}]) = 0;
         
     end
         

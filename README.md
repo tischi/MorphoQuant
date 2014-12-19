@@ -131,11 +131,11 @@ Fraction of intensity in the with "small" structures, after subjecting the image
 ##### intensFracLargeForeground
 …as decribed for "small" objects, but now for "large objects"
 
-##### areaMaxFracForeground
+##### areaFracLargestObject
 Fraction of pixels occupied by the largest of all detected objects in the respective cell. 
 
-##### maxIntensOfLargestObjectForeground
-The maximum intensity value found in the largest detected object. The maximum intensity in the largest object is measured after subjecting the image to a top-hat filter, using the "Width" parameter in "Find structures" as diameter of the erosion and dilation operations	
+##### intensFracLargestObjectForeground
+The fraction of intensity in the largest detected object in the respective cell. The sum intensity in the largest object is measured in the "Foreground" image, i.e. after subjecting the image to a top-hat filter, using the "Width" parameter in "Find structures" as diameter of the erosion and dilation operations	.
 
 ##### intensFracBackground	
 Fraction of intensity in the cellular "background" signal. The "background" signal in each cell is defined as the integrated intensity in the morphological opening of the background corrected raw data (using the "Width" parameter in "Find structures" as diameter of the erosion and dilation operations). Bascially, this is the fraction of intensity that is not localised to locally bright structures, e.g. the "unbound cytoplasmic signal".
